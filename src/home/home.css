@@ -1,0 +1,123 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  /*  background-color: #252c34; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px+2vmin);
+  color: #fff;
+}
+
+h2 {
+  padding: 10px;
+  font-size: 30px;
+}
+
+input {
+  width: 350px;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.add {
+  padding: 12px;
+  border-radius: 25px;
+  font-size: 15px;
+  margin-left: 20px;
+}
+
+.work {
+  margin-top: 10px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.remove {
+  background-color: #cd5c5c;
+}
+
+.did {
+  background-color: #50c878;
+}
+
+.allTodos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.do {
+  border-radius: 50px;
+  margin: 10px 0;
+  padding: 0 20px;
+  display: flex;
+  width: 450px;
+  align-items: center;
+  box-shadow: rgba(255, 255, 255, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.notdone {
+  background-color: #cd5c5c;
+}
+
+.done {
+  background-color: #50c878;
+}
+
+.todoText {
+  text-align: start;
+  flex: 1;
+}
+
+/*-------details---------------*/
+
+.details{
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  width: 75%;
+  display: flex;
+  align-items: center;
+}
+
+.details div{
+  margin-left: 2px;
+}
+
+.details div img{
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+}
+
+.details div p{
+  font-weight: 500;
+ 
+}
+
+@media(max-width:520px) {
+  input {
+    width: 250px;
+  }
+
+  .do {
+    width: 300px;
+    padding: 0 20px;
+    margin: 10px 0;
+  }
+
+}
