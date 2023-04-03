@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
-import LoginAccess from "../action/auth.action";
+import {LoginAccess} from "../action/auth.action";
 import './login.css';
 
 const Login = () => {
@@ -18,7 +18,7 @@ const Login = () => {
 
   useEffect(() => {
     if (accessToken) {
-      navigate("/");
+      navigate("/home");
     }
   }, [accessToken, navigate]);
 

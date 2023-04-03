@@ -10,7 +10,7 @@ const initialState = {
   }
   
 
-const authReducers = (prevState = initialState, action) => {
+  export const authReducers = (prevState = initialState, action) => {
     const { type, payload } = action;
     switch (type) {
       case "LOGIN_REQUEST":
@@ -52,5 +52,3 @@ const authReducers = (prevState = initialState, action) => {
     }
   }
   
-
-  export default authReducers;

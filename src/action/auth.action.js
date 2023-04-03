@@ -1,7 +1,7 @@
 import auth from '../firebase';
 import firebase from 'firebase/compat/app';
 
-const LoginAccess = () => async (dispatch) => {
+export const LoginAccess = () => async (dispatch) => {
     try {
       dispatch({
         type: "LOGIN_REQUEST",
@@ -50,5 +50,3 @@ const LoginAccess = () => async (dispatch) => {
     sessionStorage.removeItem("ytc-access-token");
     sessionStorage.removeItem("ytc-user");
   }
-  
-  export default LoginAccess;
