@@ -2,11 +2,11 @@ import {createStore,combineReducers,applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import {composeWithDevTools} from 'redux-devtools-extension';
 import todoReducers from './reducer/todoReducers';
-import {authReducers} from './reducer/auth.reducer';
+// import {authReducers} from './reducer/auth.reducer';
 
 const reducer = combineReducers({
    Todo:todoReducers,
-   auth:authReducers,
+//    auth:authReducers,
 });
 
 const initialState = {}

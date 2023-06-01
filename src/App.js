@@ -1,28 +1,28 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./App.css";
-import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./login/Login";
 import Home from "./home/Home";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 const App = () => {
-  const { accessToken, loading } = useSelector((state) => state.auth);
+  // const { accessToken, loading } = useSelector((state) => state.auth);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  useEffect(() => {
-    if (!loading && !accessToken) {
-      navigate("/login");
-    }
-  }, [accessToken, loading, navigate]);
+  // useEffect(() => {
+  //   if (!loading && !accessToken) {
+  //     navigate("/login");
+  //   }
+  // }, [accessToken, loading, navigate]);
 
   return (
     <Routes>
+      <Route path="/" element={<Login />} />
+
       <Route path="/home" exact element={<Home />} />
 
-      <Route path="/login"  element={<Login />} />
-
-      <Route path="*"  element={<Navigate to="/login" />} />
+      <Route path="*" element={<Navigate to="/login" />} />
     </Routes>
   );
 };

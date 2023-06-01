@@ -6,7 +6,8 @@ import {
   RemoveTodoAction,
   successTodoActions,
 } from "../action/todoActions";
-import { log_out } from "../action/auth.action";
+import { useNavigate } from "react-router-dom";
+// import { log_out } from "../action/auth.action";
 
 
 const Home = () => {
@@ -35,11 +36,15 @@ const Home = () => {
     }
   };
 
+  const navigate = useNavigate();
+
   const logOut = () =>{
-    dispatch(log_out());
+    // dispatch(log_out());
+    navigate("/");
+
   }
 
-  const { name, photoURL } = useSelector((state) => state.auth?.user);
+  // const { name, photoURL } = useSelector((state) => state.auth?.user);
 
   return (
     <div className="App">
@@ -47,10 +52,10 @@ const Home = () => {
 
         <div className="details">
           <div onClick={logOut}>
-            <img src={photoURL} alt="" />
+            <img src={"https://cdn-icons-png.flaticon.com/512/6596/6596121.png"} alt="" />
           </div>
           <div>
-            <p>{name}</p>
+            <p>Blabla</p>
           </div>
         </div>
 
